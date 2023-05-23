@@ -1,0 +1,32 @@
+:root{
+    --text-dark: #0a0a0a;
+    --text-white: #27374D;
+    --text-blue: #9DB2BF;
+}
+
+.typewriter{
+    width: 210px;
+    color: var(--text-blue);
+    font-weight: 800;
+    font-size: 18px;
+    position: relative;
+}
+
+.typewriter::after{
+    content: "";
+    border-left: 1px solid var(--text-dark);
+    background: var(--text-white);
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: typewriter 2s infinite alternate steps(21);
+}
+
+@keyframes typewriter{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0%;
+    }
+}
